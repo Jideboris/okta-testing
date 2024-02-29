@@ -1,0 +1,27 @@
+oauthClient:
+  redirectUris:
+    - ${CLI_OKTA_REVERSE_DOMAIN}:/callback
+  postLogoutRedirectUris:
+    - ${CLI_OKTA_REVERSE_DOMAIN}:/logout
+  applicationType: native
+
+directions: |+2
+  Okta configuration written to: auth.config.js
+
+  Build this example using npm:
+
+      npm install
+
+  Run instructions for iOS:
+    • pod install --project-directory=ios --repo-update
+    • npm run ios
+    - or -
+    • Open ios/SecureApp.xcworkspace in Xcode or run "xed -b ios"
+    • Hit the Run button
+
+  Run instructions for Android:
+    • Have an Android emulator running (quickest way to get started), or a device connected.
+    • npm run android
+
+  Run instructions for Windows and macOS:
+    • See https://aka.ms/ReactNative for the latest up-to-date instructions.

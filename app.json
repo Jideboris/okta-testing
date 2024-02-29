@@ -1,0 +1,10 @@
+{
+  "name": "SecureApp",
+  "displayName": "SecureApp",
+  "android": {
+    "package": "android.okta"
+  },
+  "ios": {
+    "bundleIdentifier": "ios.okta"
+  }
+}
