@@ -126,7 +126,7 @@ const App: () => Node = () => {
           //     body: 
           //     'invoiceNumber='+invoice+'&storeName='+store+'&language='+setLanguage
           // }}
-          source={{ uri: 'https://launch-workflow.trulioo.com/6508c095400117334621b808' }}
+          source={{ uri: 'Trulio URL' }}
           onMessage={onMessage}
           // injectedJavaScript={injectjs}
           injectedJavaScript={runFirst}
