@@ -114,6 +114,9 @@ const App: () => Node = () => {
   const onMessage = (event) => {
     Alert.alert(JSON.parse(event.nativeEvent.data));
   }
+  const onNavigationStateChange = (event) => {
+    Alert.alert("CHANGE OCCURED");
+  }
 
   return (
     useTrulio ? (
@@ -126,11 +129,12 @@ const App: () => Node = () => {
           //     body: 
           //     'invoiceNumber='+invoice+'&storeName='+store+'&language='+setLanguage
           // }}
-          source={{ uri: 'Trulio URL' }}
+          source={{ uri: 'Trulio' }}
           onMessage={onMessage}
           // injectedJavaScript={injectjs}
           injectedJavaScript={runFirst}
           injectedJavaScriptBeforeContentLoaded={runBeforeFirst}
+          onNavigationStateChange={onNavigationStateChange}
           scrollEnabled={true}
           domStorageEnabled={true}
           javaScriptEnabledAndroid={true}
